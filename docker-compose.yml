@@ -22,7 +22,8 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data
+      # - ./postgres_data:/var/lib/postgresql/data
+      - /home/work/Documents/postgres_data:/var/lib/postgresql/data
 
   postgresql-test:
     image: postgres
@@ -31,7 +32,8 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ./postgres_data_test:/var/lib/postgresql/data
+      # - ./postgres_data_test:/var/lib/postgresql/data
+      - /home/work/Documents/postgres_data_test:/var/lib/postgresql/data
     
   pgadmin:
     image: dpage/pgadmin4
