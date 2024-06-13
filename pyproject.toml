@@ -15,6 +15,7 @@ pytest = "^8.2.2"
 alembic = "^1.13.1"
 python-decouple = "^3.8"
 psycopg2 = "^2.8.6"
+pydantic = "^2.0.0"
 
 
 [build-system]

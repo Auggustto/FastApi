@@ -1,4 +1,7 @@
-from sqlalchemy.orm import declarative_base
+from pydantic import BaseModel
 
-
-Base = declarative_base()
+class CustomBaseModel(BaseModel):
+    def dict(self, *args, **kwargs):
+        d = super().model_dump(*args, **kwargs)
+        d = {k: v for k, v in d.items() if v is not None}
+        return d
